@@ -1,2 +1,2 @@
 # HOJVBOX
-由Java抽象复刻HOPYBOX
+由Java复刻HOPYBOX
