@@ -8,9 +8,9 @@
 	<version>0.0.1</version>
 
 	<!-- FIXME change it to the project's name -->
-	<name>App</name>
+	<name>HOJVBOX</name>
 	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
+	<url>https://github.com/HOStudio123/HOJVBOX</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -47,7 +47,7 @@
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
 							<mainClass>
-								JavaShell
+								com.hojvbox.HOJVBox
 							</mainClass>
 						</manifest>
 					</archive>
