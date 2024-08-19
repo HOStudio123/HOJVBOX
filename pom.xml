@@ -47,7 +47,7 @@
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
 							<mainClass>
-								com.hojvbox.HOJVBox
+							    JavaShell
 							</mainClass>
 						</manifest>
 					</archive>
