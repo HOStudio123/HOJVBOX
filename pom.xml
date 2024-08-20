@@ -44,7 +44,7 @@
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
 							<mainClass>
-								JavaShell
+							    JavaShell
 							</mainClass>
 						</manifest>
 					</archive>
