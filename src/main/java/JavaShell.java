@@ -1,5 +1,6 @@
 import java.util.*;
 import java.text.*;
+import java.net.InetAddress;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -24,6 +25,10 @@ public class JavaShell {
 		Scanner scanner = new Scanner(System.in);
 		// Header
 		System.out.println(cyan + "WELCOME TO HOJVBOX\n" + green + "[USER:" + userName + "]" + "[RUN:" + ft.format(dNow) + "]\n" + reset + "HOJVBOX " + version + " (defalut, Aug 19 2024, 20:14:00) \n[Java " + javaVersion + "] on " + osName + "\nType \"help\", \"copyright\", \"version\", \"feedback\" or \"license\" for more information");
+		// Device Name
+		String deviceName = InetAddress.getLocalHost().getHostName();
+		// Prompt
+		String prompt = "(HOJVBOX) " + userName + "@" + device;
 		// Main
 		while (true) {
 			System.out.print(yellow + "(HOJVBOX) " + reset);
