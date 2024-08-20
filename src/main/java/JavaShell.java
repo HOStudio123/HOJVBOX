@@ -30,9 +30,11 @@ public class JavaShell {
 			command = scanner.nextLine().trim();
 			if (command.equalsIgnoreCase("exit")) {
 				break;
+			} else if (command.equalsIgnoreCase("")) {
+			    continue;
 			} else if (command.equalsIgnoreCase("clear")) {
 			    System.out.println("\033c");
-			    system("clear");
+			    systemExec("clear");
 			} else if (command.equalsIgnoreCase("help")) {
 				printHelp();
 			} else if (command.equalsIgnoreCase("time")) {
@@ -47,10 +49,10 @@ public class JavaShell {
 						System.out.println(file.getName());
 					}
 				} else {
-					System.out.println("Unable to list files.");
+					errorCross("Unable to list files.");
 				}
 			} else {
-				System.out.println("Unknown command: " + command);
+				errorCross("Not found this command.");
 			}
 		}
 		scanner.close();
@@ -65,7 +67,7 @@ public class JavaShell {
 		System.out.println("  exit     - Exit the shell");
 	}
 	
-	private static void system(String command) {
+	private static void systemExec(String command) {
 	    try {
             Process process = Runtime.getRuntime().exec(command);
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -77,5 +79,10 @@ public class JavaShell {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    
+    private static void errorCross(String text) {
+        String red = "\033[91m";
+        System.out.println(red + "Oops! " + text);
     }
 }
